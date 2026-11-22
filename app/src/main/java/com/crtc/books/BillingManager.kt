@@ -23,7 +23,9 @@ class BillingManager(private val ctx: Context) : PurchasesUpdatedListener {
 
     private val client = BillingClient.newBuilder(ctx)
         .setListener(this)
-        .enablePendingPurchases()
+        .enablePendingPurchases(
+            PendingPurchasesParams.newBuilder().enableOneTimeProducts().build()
+        )
         .build()
 
     init {
