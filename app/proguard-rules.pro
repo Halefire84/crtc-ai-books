@@ -1,0 +1,5 @@
+-keep class com.crtc.books.** { *; }
+-keep class com.android.billingclient.** { *; }
+-keep class com.google.gson.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
